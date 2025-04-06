@@ -1,0 +1,203 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>core</Name>
+    <RootNamespace>Decode.Web.Contracts</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9869187b-9d6e-497d-88db-63bb34190ad9</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>dist\index.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".eslintignore">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include=".npmignore" />
+    <Content Include=".npmrc">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include=".prettierignore" />
+    <Content Include=".prettierrc" />
+    <Content Include=".eslintrc.js" />
+    <Content Include="git.commit.template.txt" />
+    <Content Include="src\documentaion-templates\AToZ.doc.txt">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\documentaion-templates\class.doc.txt" />
+    <Content Include="src\documentaion-templates\interface.doc.txt">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\documentaion-templates\package.doc.txt" />
+    <Content Include="src\documentaion-templates\README.md" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\constants\README.md" />
+    <Content Include="src\utils\README.md" />
+    <Content Include="src\_infrastructure\visualstudio\visualstudio.vssettings" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typedoc.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\dtobjects\requests\" />
+    <Folder Include="src\dtobjects\responses\" />
+    <Folder Include="_tests\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\documentaion-templates\" />
+    <Folder Include="src\" />
+    <Folder Include="src\constants\" />
+    <Folder Include="src\dtobjects\" />
+    <Folder Include="src\enums\" />
+    <Folder Include="src\_infrastructure\" />
+    <Folder Include="src\types\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="src\_infrastructure\visualstudio\" />
+    <Folder Include="_tests\coverage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\constants\globalconstants.ts" />
+    <TypeScriptCompile Include="src\constants\index.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IChangePasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IForgotPasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IGroupRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ILoginRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ILookupCategoryRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ILookupRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\index.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\INotificationStatusUpdateRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\INotificationRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IPasswordChangeRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IRegisterRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IResetPasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IRoleRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ISuperRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ISuperRequestWithLocaleAndDevice.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserCommunicationPreferencesRequest.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserEmailAddressRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserNameRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserPhoneNumberRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserPhotoRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\IUserDisplaySettingsRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\IHealthStatusResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\ILookupCountryResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\ILookupCurrencyResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\ILookupLanguageResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\ILookupNameValueResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\index.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\IPingResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\IUserResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\IUserGroupAndRoleResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\IWhoAmIResponse.ts" />
+    <TypeScriptCompile Include="src\models\IGroupNotification.ts" />
+    <TypeScriptCompile Include="src\models\IUserCommunicationPreferences.ts" />
+    <TypeScriptCompile Include="src\models\IUserDisplaySettings.ts" />
+    <TypeScriptCompile Include="src\models\IUserGroup.ts" />
+    <TypeScriptCompile Include="src\models\IUserLogin.ts" />
+    <TypeScriptCompile Include="src\models\IUserNotification.ts" />
+    <TypeScriptCompile Include="src\models\IGroup.ts" />
+    <TypeScriptCompile Include="src\models\ILookup.ts" />
+    <TypeScriptCompile Include="src\models\ILookupCategory.ts" />
+    <TypeScriptCompile Include="src\models\index.ts" />
+    <TypeScriptCompile Include="src\models\IRole.ts" />
+    <TypeScriptCompile Include="src\models\ISuper.ts" />
+    <TypeScriptCompile Include="src\models\IUser.ts" />
+    <TypeScriptCompile Include="src\models\IUserEmailAddress.ts" />
+    <TypeScriptCompile Include="src\models\IUserGroupRole.ts" />
+    <TypeScriptCompile Include="src\models\IUserLogon.ts" />
+    <TypeScriptCompile Include="src\models\IUserName.ts" />
+    <TypeScriptCompile Include="src\models\IUserPassword.ts" />
+    <TypeScriptCompile Include="src\models\IUserPhoneNumber.ts" />
+    <TypeScriptCompile Include="src\models\IUserPhoto.ts" />
+    <TypeScriptCompile Include="src\models\IUserWebLink.ts" />
+    <TypeScriptCompile Include="src\dtobjects\index.ts" />
+    <TypeScriptCompile Include="src\enums\HttpMethodsEnum.ts" />
+    <TypeScriptCompile Include="src\enums\index.ts" />
+    <TypeScriptCompile Include="src\enums\ServiceErrorCodesEnum.ts" />
+    <TypeScriptCompile Include="src\enums\ThemesEnum.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\types\index.ts" />
+    <TypeScriptCompile Include="src\types\LocalAuthenticationStrategyOptions.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\types\ModelIdType.ts" />
+    <TypeScriptCompile Include="src\utils\GeneralUtility.ts" />
+    <TypeScriptCompile Include="src\utils\StringUtility.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\TypeUtility.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\XMLUtility.ts" />
+    <TypeScriptCompile Include="src\utils\FileNameUtility.ts" />
+    <TypeScriptCompile Include="src\utils\IdentityUtility.ts" />
+    <TypeScriptCompile Include="src\utils\index.ts" />
+    <TypeScriptCompile Include="src\utils\PathUtility.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

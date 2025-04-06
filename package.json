@@ -1,0 +1,93 @@
+{
+	"author": {
+		"name": "David Ezechukwu"
+	},
+	"bugs": {
+		"url": "https://github.com/davidezechukwu"
+	},
+	"dependencies": {
+		"guid-typescript": "1.0.9",
+		"jstoxml": "5.0.2",
+		"xml-js": "1.6.11",
+		"path": "0.12.7",
+		"tslib": "2.8.1",
+		"uniqid": "5.4.0",
+		"pluralize": "8.0.0",
+		"debug": "^2.0.0"
+	},
+	"description": "A Package containing core contracts (interfaces, abstract classes, enumerations and types) and definitions",
+	"devDependencies": {
+		"@types/node": "22.10.10",
+		"copyfiles": "2.4.1",
+		"npm-watch": "0.13.0",		
+		"prettier": "3.4.2",		
+		"eslint": "9.19.0",
+		"@typescript-eslint/parser": "8.21.0",
+		"@typescript-eslint/eslint-plugin": "8.21.0",
+		"eslint-plugin-prettier":  "5.2.3",
+		"eslint-config-prettier": "10.0.1",
+		"eslint-plugin-eslint-plugin": "6.4.0",
+		"eslint-plugin-mocha": "10.5.0",
+		"typedoc": "0.27.6",
+		"typescript": "5.7.3"
+	},
+	"engines": {
+		"node": ">=20.9.0",
+		"npm": ">=7.24.2"
+	},
+	"homepage": "https://github.com/davidezechukwu",
+	"keywords": [
+		"Typescript",
+		"Interface Segregation Principle",
+		"Decode",
+		"David Ezechukwu"
+	],
+	"license": "0BSD",
+	"main": "dist/index.js",
+	"name": "@david.ezechukwu/core",
+	"os": [
+		"win32",
+		"linux"
+	],
+	"scripts": {
+		"build": "tsc --build",
+		"clean": "tsc --build --clean",
+		"docs": "npx typedoc",
+		"lint": "npm run lint:eslint:check --report-unused-disable-directives && npm run lint:prettier:check",
+		"lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+		"lint:check": "npm run lint:eslint:check && npm run lint:prettier:check",
+		"lint:eslint": "npx eslint  --debug --env-info --fix-dry-run --report-unused-disable-directives */**/*.ts",
+		"lint:eslint:fix": "npx eslint --fix --report-unused-disable-directives */**/*.ts",
+		"lint:eslint:check": "npx eslint  --debug --env-info --fix-dry-run --report-unused-disable-directives */**/*.ts",
+		"lint:prettier:check": "npx prettier -c */**/*.ts",
+		"lint:prettier": "npx prettier -c */**/*.ts",
+		"lint:prettier:fix": "npx prettier --write */**/*.ts",
+		"watch": "npm-watch",
+		"watch:docs": "npm run docs",
+		"watch:src": "npm run build"
+	},
+	"types": "dist/index.d.ts",
+	"version": "1.4.00",
+	"watch": {
+		"watch:docs": {
+			"patterns": [
+				"src"
+			],
+			"extensions": "ts,js",
+			"quiet": false,
+			"legacyWatch": true,
+			"delay": 2500,
+			"runOnChangeOnly": true
+		},
+		"watch:src": {
+			"patterns": [
+				"src"
+			],
+			"extensions": "ts",
+			"quiet": false,
+			"legacyWatch": true,
+			"delay": 2500,
+			"runOnChangeOnly": true
+		}
+	}
+}
