@@ -68,28 +68,6 @@ Dive in and start building amazing things with this API! If you have any questio
 
 ### Built With:-
 * [![Typescript][Typescript]][Typescript-url]
-* [![Loopback][Loopback.js]][Loopback-url]
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Supports the following databases:-
-* [![SQLServer][SQLServer]][SQLServer-url]
-* [![Postgres][Postgres]][Postgres-url]
-* [![MongoDB Badge][MongoDB]][MongoDB-url]
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-### Getting Started
-A database is required. You can create this using the attached T-SQL(possible ANSI SQL compartible and hence POSTGRES compartible) scripts, or you run a npm run migrate command on the command line; on it's first run it will create the database objects and seed the taxonomy tables,<strong>a database is required though and must be created first, together with the user logon specified on the .env file as neither the scripts nor npm run migration do this<strong>. 
-Loopback does not provide an Up and Down migration features unline .NET Entity Framework however third party libraries could be used for this
-<br/>
-If running locally in Windows and in development mode, you will need:-   
-- Docker `If a docker-based database, Redis server and worker processes are required`
-- A Redis server `A WSL2 Ubuntu Redis server would do`
-- Nodejs `version >= 20.9.0`		
-- NPM `version >= 7.24.2`
-- PowerShell with `'Set-ExecutionPolicy RemoteSigned' applied`
-- Port forwarding enabling in Windows by running `'.\api\src\_infrastructure\docker\os\windows\set-up-port-forwarding-for-wsl2.ps1'`
-- An updated hosts file is needed to be updated with the entries in `'.\api\src\_infrastructure\docker\os\windows\hosts.txt'`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
